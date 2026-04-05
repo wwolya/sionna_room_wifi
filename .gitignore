@@ -1,6 +1,7 @@
 # Виртуальные окружения
 sionna_env/
 
+
 # Установленные пакеты
 __pycache__/
 *.py[cod]
@@ -9,6 +10,8 @@ __pycache__/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+.ipynb_checkpoints/Untitled-checkpoint.ipynb
+.ipynb_checkpoints/first-checkpoint.ipynb
 
 # Временные файлы
 *.log
@@ -24,3 +27,7 @@ __pycache__/
 # Результаты работы
 output/
 results/
+
+Hello_World.ipynb
+Scene-Edit (1).ipynb
+output.png

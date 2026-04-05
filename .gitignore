@@ -1,0 +1,26 @@
+# Виртуальные окружения
+sionna_env/
+
+# Установленные пакеты
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Временные файлы
+*.log
+*.tmp
+.DS_Store
+
+# Большие файлы данных (если есть)
+*.png
+*.jpg
+*.gif
+*.mp4
+
+# Результаты работы
+output/
+results/

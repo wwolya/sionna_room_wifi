@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scene version="2.1.0">
+
+
+
+	<default name="spp" value="4096" />
+	<default name="resx" value="1920" />
+	<default name="resy" value="1080" />
+
+
+
+	<integrator type="path" id="elm__0" name="elm__0">
+		<integer name="max_depth" value="12" />
+	</integrator>
+	<sensor type="perspective" id="elm__15" name="elm__15">
+		<string name="fov_axis" value="x" />
+		<float name="fov" value="45.892287" />
+		<float name="principal_point_offset_x" value="0.000000" />
+		<float name="principal_point_offset_y" value="-0.000000" />
+		<float name="near_clip" value="0.100000" />
+		<float name="far_clip" value="1000.000000" />
+		<transform name="to_world">
+			<rotate x="1" angle="110.69596063304787" />
+			<rotate y="1" angle="2.0439540217395098e-05" />
+			<rotate z="1" angle="-1.3654292234142553e-06" />
+			<translate value="0.334383 3.416799 1.132596" />
+		</transform>
+		<sampler type="independent" name="sampler">
+			<integer name="sample_count" value="$spp" />
+		</sampler>
+		<film type="hdrfilm" name="film">
+			<integer name="width" value="$resx" />
+			<integer name="height" value="$resy" />
+		</film>
+	</sensor>
+
+
+
+	<bsdf type="diffuse" id="mat-itu-concrete" name="mat-itu-concrete">
+		<rgb value="0.750000 0.750000 0.750000" name="reflectance" />
+	</bsdf>
+	<bsdf type="diffuse" id="mat-itu-glass" name="mat-itu-glass">
+		<rgb value="0.600000 0.750000 0.850000" name="reflectance" />
+	</bsdf>
+	<bsdf type="diffuse" id="mat-itu-wood" name="mat-itu-wood">
+		<rgb value="0.550000 0.350000 0.200000" name="reflectance" />
+	</bsdf>
+	<bsdf type="diffuse" id="mat-itu-metal" name="mat-itu-metal">
+		<rgb value="0.400000 0.400000 0.420000" name="reflectance" />
+	</bsdf>
+
+
+
+	<emitter type="directional" id="elm__14" name="elm__14">
+		<rgb value="11.000004 11.000004 11.000004" name="irradiance" />
+		<transform name="to_world">
+			<matrix value="1.000000 0.000000 0.000000 -0.128230 0.000000 -1.000000 -0.000000 -0.171594 0.000000 0.000000 -1.000000 1.163048 0.000000 0.000000 0.000000 1.000000" />
+		</transform>
+	</emitter>
+
+
+
+	<shape type="ply" id="wall" name="wall">
+		<string name="filename" value="meshes/wall.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu-concrete" name="bsdf" />
+	</shape>
+	<shape type="ply" id="floor" name="floor">
+		<string name="filename" value="meshes/floor.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu-concrete" name="bsdf" />
+	</shape>
+	<shape type="ply" id="partition" name="partition">
+		<string name="filename" value="meshes/partition.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu-glass" name="bsdf" />
+	</shape>
+	<shape type="ply" id="table2" name="table2">
+		<string name="filename" value="meshes/table2.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu-wood" name="bsdf" />
+	</shape>
+	<shape type="ply" id="table1" name="table1">
+		<string name="filename" value="meshes/table1.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu-wood" name="bsdf" />
+	</shape>
+	<shape type="ply" id="table3" name="table3">
+		<string name="filename" value="meshes/table3.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu-wood" name="bsdf" />
+	</shape>
+	<shape type="ply" id="comp1" name="comp1">
+		<string name="filename" value="meshes/comp1.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu-metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="comp2" name="comp2">
+		<string name="filename" value="meshes/comp2.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu-metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="comp3" name="comp3">
+		<string name="filename" value="meshes/comp3.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu-metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="point_001" name="point_001">
+		<string name="filename" value="meshes/point_001.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu-wood" name="bsdf" />
+	</shape>
+	<shape type="ply" id="point_002" name="point_002">
+		<string name="filename" value="meshes/point_002.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu-wood" name="bsdf" />
+	</shape>
+	<shape type="ply" id="point_003" name="point_003">
+		<string name="filename" value="meshes/point_003.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu-wood" name="bsdf" />
+	</shape>
+
+
+
+</scene>
